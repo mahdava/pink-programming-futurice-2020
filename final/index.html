@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokemon TCG Search</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Pokemon TCG Search</h1>
+      <h2>
+        Search UI for
+        <a href="http://pokemontcg.io/">Pokemon TCG API</a>
+      </h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="favourites.html">Favourites</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form>
+        <label for="search">Pokemon name:</label>
+        <input
+          type="text"
+          id="search"
+          value="Bulbasaur"
+          placeholder="Bulbasaur"
+        />
+
+        <button id="submit-search">Search</button>
+      </form>
+
+      <section id="loader" class="hidden">
+        <span>Loading...</span>
+      </section>
+      <section id="results" class="hidden">
+        <ul id="card-list"></ul>
+      </section>
+    </main>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>

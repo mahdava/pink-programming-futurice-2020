@@ -1,0 +1,112 @@
+body {
+  font-family: "Futura";
+}
+
+header > h2 {
+  font-size: 1rem;
+  margin-top: -1rem;
+}
+
+header {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+header a {
+  color: yellowgreen;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+form {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form input[type="text"] {
+  padding: 0.5rem;
+  font-size: 110%;
+  color: black;
+  font-weight: 300;
+}
+
+form button {
+  padding: 0.5rem;
+  font-size: 110%;
+  color: black;
+  font-weight: 300;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  transition: 0.2s all ease-in;
+}
+
+form button:hover {
+  background-color: yellowgreen;
+  color: white;
+  cursor: pointer;
+}
+
+#card-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#card-list li {
+  text-align: center;
+  width: 100%;
+  padding: 3rem 0;
+}
+
+#card-list li img {
+  /*max-width: 70%;*/
+  max-width: 240px;
+}
+
+.add-to-favourites {
+  padding: 0.5rem;
+  font-size: 110%;
+  color: black;
+  font-weight: 300;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  transition: 0.2s all ease-in;
+}
+
+.add-to-favourites:hover {
+  background-color: yellowgreen;
+  color: white;
+  cursor: pointer;
+}
+
+/* https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #card-list li {
+    width: 50%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #card-list li {
+    width: 33%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #card-list li {
+    width: 25%;
+  }
+}
