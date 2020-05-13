@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pokemon TCG Search</title>
+    <title>Pokémon TCG Search</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
 
   <body>
     <header>
-      <h1>Pokemon TCG Search</h1>
+      <h1>Pokémon TCG Search</h1>
       <h2>
         Search UI for
-        <a href="http://pokemontcg.io/">Pokemon TCG API</a>
+        <a href="http://pokemontcg.io/">Pokémon TCG API</a>
       </h2>
       <nav>
         <ul>
@@ -21,10 +21,17 @@
       </nav>
     </header>
     <main>
+      <form>
+        <label for="search">Pokémon name:</label>
+        <input type="text" id="search" placeholder="Bulbasaur" />
+
+        <button id="submit-search">Search</button>
+      </form>
+
       <section id="loader" class="hidden">
         <span>Loading...</span>
       </section>
-      <section id="favourites" class="hidden">
+      <section id="results" class="hidden">
         <ul id="card-list"></ul>
       </section>
     </main>

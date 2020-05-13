@@ -72,6 +72,22 @@ form button:hover {
   max-width: 240px;
 }
 
+.add-to-favourites {
+  padding: 0.5rem;
+  font-size: 110%;
+  color: black;
+  font-weight: 300;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  transition: 0.2s all ease-in;
+}
+
+.add-to-favourites:hover {
+  background-color: yellowgreen;
+  color: white;
+  cursor: pointer;
+}
+
 /* https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
 
 /* Medium devices (landscape tablets, 768px and up) */

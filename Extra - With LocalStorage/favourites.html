@@ -13,19 +13,18 @@
         Search UI for
         <a href="http://pokemontcg.io/">Pokémon TCG API</a>
       </h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="favourites.html">Favourites</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-      <form>
-        <label for="search">Pokémon name:</label>
-        <input type="text" id="search" placeholder="Bulbasaur" />
-
-        <button id="submit-search">Search</button>
-      </form>
-
       <section id="loader" class="hidden">
         <span>Loading...</span>
       </section>
-      <section id="results" class="hidden">
+      <section id="favourites" class="hidden">
         <ul id="card-list"></ul>
       </section>
     </main>

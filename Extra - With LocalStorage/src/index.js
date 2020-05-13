@@ -41,6 +41,20 @@ const searchCards = event => {
             listItem.append(cardImage);
             listItem.append(cardTitle);
 
+            ///
+            const addToFavouritesButton = document.createElement("button");
+            addToFavouritesButton.innerText = "Add to favourites";
+            addToFavouritesButton.classList.add("add-to-favourites");
+            addToFavouritesButton.dataset.cardImageUrl = card.imageUrl;
+            addToFavouritesButton.dataset.cardName = card.name;
+            addToFavouritesButton.dataset.cardSet = card.set;
+            addToFavouritesButton.addEventListener(
+              "click",
+              addToFavourites,
+              false
+            );
+            listItem.append(addToFavouritesButton);
+
             return listItem;
           });
           listItems.forEach(item => cardList.append(item));
@@ -62,4 +76,61 @@ const searchCards = event => {
   }
 };
 
+const getCurrentFavourites = () => {
+  return JSON.parse(localStorage.getItem("favouriteCardsList"));
+};
+
+const addToFavourites = event => {
+  const favouriteCardsList = getCurrentFavourites() || [];
+  const selectedCardButton = event.target;
+  const newCard = {
+    name: selectedCardButton.dataset.cardName,
+    set: selectedCardButton.dataset.cardSet,
+    imageUrl: selectedCardButton.dataset.cardImageUrl
+  };
+
+  favouriteCardsList.push(newCard);
+
+  // update the information saved locally
+  localStorage.setItem(
+    "favouriteCardsList",
+    JSON.stringify(favouriteCardsList)
+  );
+};
+
+const showFavourites = () => {
+  loaderSection.classList.remove("hidden");
+  cardList.innerHTML = "";
+  favouritesSection.classList.add("hidden");
+  const favouriteCardsList = getCurrentFavourites() || [];
+
+  console.log(favouriteCardsList);
+  if (favouriteCardsList.length > 0) {
+    const listItems = favouriteCardsList.map(function(card) {
+      const listItem = document.createElement("li");
+      const cardImage = document.createElement("img");
+      const cardTitle = document.createElement("h3");
+      cardImage.src = card.imageUrl;
+      cardImage.alt = `${card.name} from ${card.set}`;
+      cardTitle.innerText = `${card.name} from ${card.set}`;
+      listItem.append(cardImage);
+      listItem.append(cardTitle);
+      return listItem;
+    });
+    listItems.forEach(item => cardList.append(item));
+    loaderSection.classList.add("hidden");
+    favouritesSection.classList.remove("hidden");
+  } else {
+    const noFavouritesCards = document.createElement("p");
+    noFavouritesCards.innerHTML = `You have no favourite cards yet.`;
+    cardList.append(noFavouritesCards);
+
+    loaderSection.classList.add("hidden");
+    favouritesSection.classList.remove("hidden");
+  }
+};
+
 if (searchButton) searchButton.addEventListener("click", searchCards);
+
+if (favouritesSection)
+  document.addEventListener("DOMContentLoaded", showFavourites);
