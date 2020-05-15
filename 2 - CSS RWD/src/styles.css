@@ -1,0 +1,54 @@
+body {
+  font-family: verdana;
+}
+
+p {
+  color: #180044;
+}
+
+#para1 {
+  text-align: center;
+  color: #310655;
+}
+
+.letter-spacing {
+  letter-spacing: 3px;
+}
+
+p.letter-spacing {
+  letter-spacing: 1px;
+}
+
+p strong {
+  color: mediumslateblue;
+}
+
+h1,
+h2 {
+  color: palevioletred;
+  font-family: arial;
+}
+
+h1,
+h2,
+p {
+  padding: 0.5rem;
+}
+
+form {
+  padding: 1rem;
+}
+
+.form-title {
+  text-align: center;
+}
+
+form * {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#card-list {
+  list-style: none;
+}
