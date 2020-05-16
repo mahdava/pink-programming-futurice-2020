@@ -37,15 +37,16 @@ p {
 
 form {
   padding: 1rem;
+  padding-top: 0;
 }
 
 .form-title {
   text-align: center;
 }
 
-form * {
+form *:not(em) {
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
   text-align: center;
 }
 
