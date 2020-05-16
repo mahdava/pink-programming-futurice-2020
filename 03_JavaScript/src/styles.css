@@ -1,0 +1,119 @@
+body {
+  font-family: verdana;
+}
+
+p {
+  color: #180044;
+}
+
+#para1 {
+  text-align: center;
+  color: #310655;
+}
+
+.letter-spacing {
+  letter-spacing: 3px;
+}
+
+p.letter-spacing {
+  letter-spacing: 1px;
+}
+
+p strong {
+  color: mediumslateblue;
+}
+
+h1,
+h2 {
+  color: palevioletred;
+  font-family: arial;
+}
+
+h1,
+h2,
+p {
+  padding: 0.5rem;
+}
+
+form {
+  padding: 1rem;
+  padding-top: 0;
+}
+
+.form-title {
+  text-align: center;
+}
+
+form *:not(em) {
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+form input[type="text"] {
+  min-width: 70%;
+  padding: 1rem;
+  font-size: 2rem;
+  border: 1px solid palevioletred;
+}
+
+#submit-search {
+  padding: 1rem;
+  font-size: 1rem;
+  min-width: 200px;
+  min-height: 30px;
+  border: 1px solid palevioletred;
+  color: palevioletred;
+  background-color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.1s all ease-in;
+}
+
+#submit-search:hover {
+  background-color: palevioletred;
+  color: white;
+}
+
+#card-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#card-list li {
+  text-align: center;
+  width: 100%;
+  padding: 3rem 0;
+}
+
+#card-list li img {
+  max-width: 240px;
+}
+
+/* https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #card-list li {
+    width: 50%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #card-list li {
+    width: 33%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #card-list li {
+    width: 25%;
+  }
+}

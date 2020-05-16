@@ -2,10 +2,10 @@
 
 ## Navigation list
 
-[HTML Resources and Exercises](https://github.com/mahdava/pink-programming-futurice-2020/tree/master/0%20-%20HTML)
-[CSS Resources and Exercises](https://github.com/mahdava/pink-programming-futurice-2020/tree/master/1%20-%20CSS)
-[CSS RWD Resources](https://github.com/mahdava/pink-programming-futurice-2020/tree/master/2%20-%20CSS%20RWD)
-[JavaScript Resources and Exercises](https://github.com/mahdava/pink-programming-futurice-2020/tree/master/3%20-%20JavaScript)
+[HTML Resources and Exercises](https://github.com/mahdava/pink-programming-futurice-2020/tree/master/01_HTML)
+[CSS Resources and Exercises](https://github.com/mahdava/pink-programming-futurice-2020/tree/master/02_CSS)
+[CSS RWD Resources](https://github.com/mahdava/pink-programming-futurice-2020/tree/master/02b_CSS%20RWD)
+[JavaScript Resources and Exercises](https://github.com/mahdava/pink-programming-futurice-2020/tree/master/03_JavaScript)
 
 # HTML Resources (All the links present in the slides)
 

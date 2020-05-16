@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pokémon Search UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Search UI For Pokémon TCG</h1>
+      <section>
+        <h2>Introduction</h2>
+        <p id="para1">
+          This Search UI will let you search for a pokémon in the free pokémon
+          trading card game (TCG).
+        </p>
+        <p class="letter-spacing">
+          We really don't need many paragraphs here, but we're trying to make a
+          point discovering the wonders of CSS, so let's just add random
+          paragraphs.
+        </p>
+        <p>
+          Did somebody say paragraphs? I clearly heard
+          <strong>more paragraphs</strong> here!
+        </p>
+      </section>
+      <section>
+        <h2 class="letter-spacing form-title">Search form</h2>
+        <form>
+          <label for="search">Pokémon name:</label>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            aria-describedby="search-help"
+          />
+          <span id="search-help"
+            >e.g. <em>Bulbasaur</em> (Enter at least three letters)
+          </span>
+          <button type="submit" id="submit-search">Search</button>
+        </form>
+      </section>
+      <section id="results">
+        <h2>Results</h2>
+        <ul id="card-list"></ul>
+      </section>
+    </main>
+  </body>
+</html>
