@@ -4,9 +4,10 @@ const API_URL = "https://api.pokemontcg.io/v1/cards?name=";
 
 const loaderSection = document.getElementById("loader");
 const resultsSection = document.getElementById("results");
-const favouritesSection = document.getElementById("favourites");
+const resultsOutcome = document.getElementById("results-outcome");
 const searchInput = document.getElementById("search");
 const searchButton = document.getElementById("submit-search");
+const searchErrorMessage = document.getElementById("search-error");
 
 const cardList = document.getElementById("card-list");
 
@@ -14,12 +15,17 @@ const searchCards = event => {
   // this prevents the default behavior of submitting a form
   event.preventDefault();
 
+  // clean everything
   cardList.innerHTML = "";
-  loaderSection.classList.remove("hidden");
+  searchErrorMessage.innerHTML = "";
+  resultsOutcome.innerHTML = "";
+
   resultsSection.classList.add("hidden");
 
   // let's check before that we have written anything in the input before trying to send a request
   if (searchInput.value.length >= 3) {
+    resultsOutcome.innerHTML = "Loading...";
+
     // we could also do more checkings on what has been written
     fetch(`${API_URL}${searchInput.value}`)
       .then(function(response) {
@@ -44,21 +50,22 @@ const searchCards = event => {
             return listItem;
           });
           listItems.forEach(item => cardList.append(item));
+
+          const cardsNumberMessage = document.createElement("p");
+          cardsNumberMessage.innerHTML = `Found <strong>${cards.length}</strong> pokémon cards for '<em>${searchInput.value}</em>'`;
+          resultsOutcome.append(cardsNumberMessage);
         } else {
           const noCardsMessage = document.createElement("p");
-          noCardsMessage.innerHTML = `Cannot find pokémon cards for '<i>${searchInput.value}</i>'`;
-          cardList.append(noCardsMessage);
+          noCardsMessage.innerHTML = `Cannot find pokémon cards for '<em>${searchInput.value}</em>'`;
+          resultsOutcome.append(noCardsMessage);
         }
-        loaderSection.classList.add("hidden");
+
         resultsSection.classList.remove("hidden");
       });
   } else {
     const minimumCharactersMessage = document.createElement("p");
-    minimumCharactersMessage.innerHTML = `Please enter at least three letters (you searched for '<i>${searchInput.value}</i>').`;
-    cardList.append(minimumCharactersMessage);
-
-    loaderSection.classList.add("hidden");
-    resultsSection.classList.remove("hidden");
+    minimumCharactersMessage.innerHTML = `Please enter at least three letters (you searched for '<em>${searchInput.value}</em>').`;
+    searchErrorMessage.append(minimumCharactersMessage);
   }
 };
 

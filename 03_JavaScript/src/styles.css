@@ -57,6 +57,11 @@ form input[type="text"] {
   border: 1px solid palevioletred;
 }
 
+#search-error p {
+  font-weight: bold;
+  color: red;
+}
+
 #submit-search {
   padding: 1rem;
   font-size: 1rem;
