@@ -1,4 +1,4 @@
-// Briefly what is this file doing
+// This is an uncleaned version of the last file we've been working on
 
 const API_URL = "https://api.pokemontcg.io/v1/cards?name=";
 

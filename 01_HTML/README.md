@@ -7,6 +7,8 @@
 [CSS RWD Resources](https://github.com/mahdava/pink-programming-futurice-2020/tree/master/02b_CSS%20RWD)
 [JavaScript Resources and Exercises](https://github.com/mahdava/pink-programming-futurice-2020/tree/master/03_JavaScript)
 
+[JavaScript Algorithms Resources and Exercises](https://github.com/mahdava/pink-programming-futurice-2020/tree/master/04_Extras_Algorithms_and_LocalStorage_Example)
+
 # HTML Exercises
 
 With the help of the [HTML learning resources of w3schools](https://www.w3schools.com/html/html_intro.asp), Google and your mentor, let's do the following assignments.
